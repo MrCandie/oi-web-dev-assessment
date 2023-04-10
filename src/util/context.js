@@ -9,6 +9,7 @@ export const AuthContext = createContext({
 
 export default function AuthProvider({ children }) {
   const initialToken = localStorage.getItem("token");
+
   const [token, setToken] = useState(initialToken);
 
   const isLoggedIn = !!token;

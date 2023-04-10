@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { TbArrowNarrowLeft } from "react-icons/tb";
-import postDetail from "../../image/user1.jpeg";
 import Header from "../home/header/Header";
 import AddComment from "./AddComment";
 import Comments from "./comments/Comments";

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import FeaturedList from "./FeaturedList";
 import { getAllPosts } from "../../../util/http";
+import Search from "../../ui/Search";
 
 export default function Featured() {
   const [posts, setPosts] = useState([]);
@@ -17,7 +18,8 @@ export default function Featured() {
     fetchData();
   }, [token]);
   return (
-    <div className="w-full h-full">
+    <div className="w-full bg-[#eee] h-full">
+      <Search setPosts={setPosts} />
       <FeaturedList posts={posts} />
     </div>
   );

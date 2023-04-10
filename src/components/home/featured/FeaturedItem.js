@@ -1,10 +1,12 @@
 import React from "react";
-import blogImg from "../../../image/user1.jpeg";
 import { Link } from "react-router-dom";
 
 export default function FeaturedItem({ item }) {
   return (
-    <div className="w-[70%] mx-auto flex items-center gap-4 bg-white p-2 rounded-md drop-shadow-lg">
+    <div
+      key={item.id}
+      className="w-[70%] mx-auto flex items-center gap-4 bg-white p-2 rounded-md drop-shadow-lg"
+    >
       <div className="w-[400px]">
         <img className="img h-[300px]" alt="featured" src={item.image} />
       </div>

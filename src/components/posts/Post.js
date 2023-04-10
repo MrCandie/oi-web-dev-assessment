@@ -4,6 +4,7 @@ import PostList from "./PostList";
 import { getUserPosts } from "../../util/http";
 import PostActions from "./PostActions";
 import CreatePost from "./CreatePost";
+import Search from "../ui/Search";
 
 export default function Post() {
   const [posts, setPosts] = useState([]);
@@ -22,9 +23,12 @@ export default function Post() {
   }, [token]);
   return (
     <Fragment>
-      <div className="w-full">
+      <div className="w-full bg-[#eee]">
         <Header />
-        <PostActions showPostModal={setShowPostModal} />
+        <Search setPosts={setPosts} />
+        <div className="my-10">
+          <PostActions showPostModal={setShowPostModal} />
+        </div>
         {posts.length > 0 ? (
           <PostList posts={posts} />
         ) : (
