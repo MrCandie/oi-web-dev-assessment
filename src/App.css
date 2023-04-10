@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img {
+  @apply w-full object-cover;
+}
+.action {
+  @apply flex space-x-6 items-center justify-between;
+}
+.label {
+  @apply text-xs lg:text-base font-medium capitalize text-start text-[#57585A];
+}
+.input-container {
+  @apply flex relative flex-col space-y-1;
+}
+.input {
+  @apply focus:border-green-500 transition-all duration-300 py-2 flex-1 px-4 border-2 rounded-xl outline-none;
+}
+.button {
+  @apply bg-[#23A455] flex-1 hover:opacity-40 transition-all duration-300  hover:shadow-xl capitalize rounded-lg text-white text-base font-semibold cursor-pointer py-2 lg:py-3 px-3 lg:px-6;
+}
+.btn {
+  @apply text-base capitalize font-bold  hover:opacity-80 px-4 py-2 text-white outline-none rounded-lg hover:shadow-lg transition-all duration-300;
+}
+.text {
+  @apply text-base font-medium capitalize text-black;
+}
+.user-container {
+  @apply w-full flex items-center justify-between p-4 border-b-2;
+}
+.wrap {
+  @apply w-full p-4 border-b-2 flex items-center justify-between;
+}
+.wrap-text {
+  @apply text-base font-normal text-start capitalize;
+}
+::-webkit-scrollbar {
+  width: 2px;
+  height: 0px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  /* border-radius: 10px; */
+  height: 3px;
+  width: 4px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar-track {
+  margin: 20rem 0;
 }
