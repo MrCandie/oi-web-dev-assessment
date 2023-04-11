@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function FeaturedItem({ item }) {
+export default function FeaturedItem({ item, i }) {
   return (
     <div
-      key={item.id}
+      key={i}
       className="w-[70%] mx-auto flex items-center gap-4 bg-white p-2 rounded-md drop-shadow-lg"
     >
       <div className="w-[400px]">

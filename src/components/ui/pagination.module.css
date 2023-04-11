@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  align-items: center;
+}
+.container .btn {
+  background: transparent;
+  border: 1px solid green;
+  padding: 0.5rem 1rem;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+.container .active {
+  background: green;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width: 850px) {
+  .container {
+    justify-content: flex-start;
+  }
+  .container .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+  .container .active {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}

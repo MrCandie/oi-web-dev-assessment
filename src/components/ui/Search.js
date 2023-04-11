@@ -26,7 +26,7 @@ export default function Search({ setPosts }) {
           type="search"
           onChange={searchHandler}
           className="flex-1 bg-transparent outline-none"
-          placeholder="Enter search item"
+          placeholder="Enter Post Title"
         />
       </div>
     </div>

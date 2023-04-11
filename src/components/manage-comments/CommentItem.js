@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function CommentItem({ item }) {
+export default function CommentItem({ item, i }) {
   const navigate = useNavigate();
   const author = item.user.find((item) => item).name;
   return (
     <div
+      key={i}
       onClick={() => navigate(`/comments/${item._id}`)}
       className="w-full cursor-pointer hover:opacity-80 hover:drop-shadow-lg transition-all duration-300 flex flex-col gap-2 rounded-xl p-2 bg-[#ccc] drop-shadow-lg"
     >

@@ -13,6 +13,8 @@ export default function CommentDetail({ comment }) {
   }
   const author = comment.user.find((item) => item).name;
 
+  const postTitle = comment.post.find((item) => item).title;
+
   const token = localStorage.getItem("token");
 
   async function deleteHandler() {
@@ -58,6 +60,10 @@ export default function CommentDetail({ comment }) {
             <div className="wrap">
               <p className="wrap-text">created at</p>
               <p className="wrap-text">{comment.createdAt}</p>
+            </div>
+            <div className="wrap">
+              <p className="wrap-text">post title</p>
+              <p className="wrap-text">{postTitle}</p>
             </div>
 
             <div className="mt-10">

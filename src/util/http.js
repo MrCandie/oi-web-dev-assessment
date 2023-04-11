@@ -78,7 +78,7 @@ export async function getPostComments(token, id) {
 }
 
 export async function getAllComments(token) {
-  const response = await axios.get(API_URL + `/comments/user`, {
+  const response = await axios.get(API_URL + `/comments`, {
     headers: {
       Authorization: `Bearer ${token} `,
     },
